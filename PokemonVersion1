@@ -14,11 +14,19 @@ class Pokemon
 $psiDuck = new Pokemon;
 $psiDuck->PokemonName = "PsiDuck";
 $psiDuck->PokemonType = "Psychic Pokemon";
-// Get the object properties values
-echo "Pokemon Name".$psiDuck->PokemonName;  
-echo "Pokemon Type".$psiDuck->PokemonType;  
- 
-// Call the object methods
-echo "Pokemon Attack Strength:  ".$psiDuck->PokemonAttack();  
+$pokemonArray = array();
+
+for ($counter=0; $counter<10; $counter++){
+	$psiDuck = new Pokemon;
+	$psiDuck->PokemonName = $counter;
+	$psiDuck->PokemonType = "Psychic Pokemon";
+	$pokemonArray[] = $psiDuck;
+}
+
+foreach ($pokemonArray as $pokemonItem) {
+    echo "\n\rPokemon Name: ".$pokemonItem->PokemonName;
+    echo "\n\rPokemon Attack Strength: ".".$pokemonItem->PokemonAttack();
+
+}
 
 ?>

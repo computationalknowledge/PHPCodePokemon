@@ -1,0 +1,69 @@
+<?php
+// Coding Lab PHP NOV 21
+// get an input number from the user
+// assign it to variable / that is the user input
+
+// create a variable for user input
+$userINPUT = 50;
+// change line 12 so it only outputs if the Strength is GREATER
+// the user input
+
+for ($counter=0; $counter<100; $counter++) {
+   $pokemonAttachStrength=rand(1,100);
+   if ($userINPUT > $pokemonAttachStrength){
+   echo "user input is".$userINPUT."\n\r"; 
+	echo "Pokemon attack strength is".$pokemonAttachStrength."\n\r";  
+}
+}
+?>
+
+
+<?php
+
+$userINPUT = 50;
+
+   	$pokemonAttachStrength=rand(1,100);
+   
+   	echo "user input is".$userINPUT."\n\r"; 
+	echo "Pokemon attack strength is".$pokemonAttachStrength."\n\r";  
+
+?>
+
+
+<?php
+class Rectangle
+{
+    // Declare  properties
+    public $length = 0;
+    public $width = 0;
+    
+    // Method to get the perimeter
+    public function getPerimeter(){
+        return (2 * ($this->length + $this->width));
+    }
+    
+    // Method to get the area
+    public function getArea(){
+        return ($this->length * $this->width);
+    }
+}
+
+$obj = new Rectangle;
+ 
+// Get the object properties values
+echo $obj->length; // 0utput: 0
+echo $obj->width; // 0utput: 0
+ 
+// Set object properties values
+$obj->length = 30;
+$obj->width = 20;
+ 
+// Read the object properties values again to show the change
+echo $obj->length; // 0utput: 30
+echo $obj->width; // 0utput: 20
+ 
+ 
+// Call the object methods
+echo $obj->getPerimeter(); // 0utput: 100
+echo $obj->getArea(); // Output: 600
+?>
